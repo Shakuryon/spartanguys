@@ -34,7 +34,7 @@ section{padding:5.5rem 0}
 
 /* hero */
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;max-width:1200px;margin:0 auto;padding:5rem 1.5rem 4rem;position:relative;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:-10% -20% auto 30%;height:120%;background:radial-gradient(circle at 60% 40%,rgba(212,18,43,.55),transparent 62%);z-index:-1}
+.hero::before{content:"";position:absolute;inset:-10% -10% auto 30%;height:120%;background:radial-gradient(circle at 60% 40%,rgba(212,18,43,.55),transparent 62%);z-index:-1}
 .hero p{margin:1.4rem 0 2rem;max-width:44ch;color:var(--mute);font-size:1.15rem}
 .cta{display:flex;gap:1rem;flex-wrap:wrap}
 .btn{display:inline-block;background:var(--grad);color:var(--bone);border:0;padding:.9rem 1.8rem;border-radius:99px;font:600 1rem var(--body);text-decoration:none;cursor:pointer;box-shadow:0 0 0 1px var(--red) inset;transition:transform .2s}
@@ -149,3 +149,29 @@ legend small{font:400 .8rem var(--body);color:var(--mute);margin-left:.4rem}
 .ticket-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
 .btn.dark{color:#2a1216;box-shadow:0 0 0 1px #2a1216 inset}
 .tnote{margin:1rem 0 0;font-size:.82rem;color:#6a4a4f}
+
+/* spartan helmet follower */
+.helm{--accent:#d4122b;position:fixed;left:0;top:0;width:116px;z-index:40;pointer-events:none;will-change:transform;overflow:hidden; filter:drop-shadow(0 8px 10px rgba(0,0,0,.55))}
+.helm-svg{display:block;width:100%;height:auto;overflow:visible}
+.helm .crest{fill:var(--accent);transition:fill .6s;transform-origin:32px 24px;animation:crest 1.6s ease-in-out infinite}
+.helm .dome{fill:url(#metal);stroke:var(--bone);stroke-width:1.2;stroke-linejoin:round}
+.helm .rim{fill:none;stroke:var(--accent);stroke-width:1.4;opacity:.8;transition:stroke .6s}
+.helm .eye{fill:#050203;stroke:var(--accent);stroke-width:1.2;transition:stroke .6s;animation:glow 2.4s ease-in-out infinite}
+.helm .wing path{fill:var(--accent);fill-opacity:.35;stroke:var(--accent);stroke-width:1;transition:fill .6s,stroke .6s}
+.helm .wing-l{transform-origin:14px 38px;animation:flapL .28s ease-in-out infinite alternate}
+.helm .wing-r{transform-origin:50px 38px;animation:flapR .28s ease-in-out infinite alternate}
+.helm-tip{position:absolute;right:100%;top:18px;margin-right:4px;white-space:nowrap;background:var(--bone);color:#2a1216;font:600 .8rem var(--cute);padding:.25rem .7rem;border-radius:99px;opacity:0;transform:translateX(6px);transition:opacity .35s,transform .35s}
+.helm-tip.show{opacity:1;transform:none}
+@keyframes crest{50%{transform:scaleY(1.07) skewX(-2deg)}}
+@keyframes glow{50%{filter:drop-shadow(0 0 4px var(--accent))}}
+@keyframes flapL{from{transform:scaleX(1) rotate(0)}to{transform:scaleX(.55) rotate(8deg)}}
+@keyframes flapR{from{transform:scaleX(1) rotate(0)}to{transform:scaleX(.55) rotate(-8deg)}}
+@media (prefers-reduced-motion:reduce){.helm *{animation:none!important}}
+
+
+/* 
+*,
+*::before,
+*::after {
+    outline: 1px solid rgb(72, 255, 0);
+} */

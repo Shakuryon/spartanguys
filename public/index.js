@@ -134,3 +134,66 @@ $('#copyBtn').addEventListener('click', async e => {
   setTimeout(() => e.target.textContent = 'Copy order', 1600);
 });
 refresh();
+
+// Spartan helmet follower: drifts along the right side, trails scroll like a butterfly,
+// tilts with scroll speed, and recolors per section (set data-helm / data-tip in the HTML).
+(() => {
+  const helm = document.getElementById('helm');
+  if (!helm) return;
+  const tip = helm.querySelector('.helm-tip');
+  const marks = [...document.querySelectorAll('[data-helm]')];
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const clamp = (n, a, b) => Math.min(b, Math.max(a, n));
+  let tops = [], x = 0, y = 0, tilt = 0, svel = 0, last = scrollY, cur = -1, tipTimer;
+
+  function measure() {
+    tops = marks.map(m => m.getBoundingClientRect().top + scrollY);
+  }
+  function section(yDoc) {
+    let idx = 0;
+    tops.forEach((t, i) => { if (yDoc >= t) idx = i; });
+    return idx;
+  }
+  function paint(i) {
+    if (i === cur) return;
+    cur = i;
+    helm.style.setProperty('--accent', marks[i].dataset.helm);
+    tip.textContent = marks[i].dataset.tip || '';
+    tip.classList.add('show');
+    clearTimeout(tipTimer);
+    tipTimer = setTimeout(() => tip.classList.remove('show'), 2200);
+  }
+  function target(now) {
+    const w = innerWidth, h = innerHeight, size = helm.offsetWidth;
+    const max = Math.max(1, document.documentElement.scrollHeight - h);
+    const p = scrollY / max;
+    const lane = Math.min(w * 0.3, 320);
+    const tx = w - size - 12 - (0.5 + 0.5 * Math.sin(p * Math.PI * 8)) * lane;
+    const ty = h * 0.68 - clamp(svel * 5, -140, 140) + Math.sin(now / 550) * 9;
+    return [tx, ty];
+  }
+  function frame(now) {
+    const dy = scrollY - last; last = scrollY;
+    svel += (dy - svel) * 0.15;
+    const [tx, ty] = target(now);
+    x += (tx - x) * 0.07;
+    y += (ty - y) * 0.09;
+    tilt += (clamp(svel * 1.4, -25, 25) + clamp((tx - x) * 0.15, -15, 15) - tilt) * 0.1;
+    helm.style.transform = `translate3d(${x}px,${y}px,0) rotate(${tilt}deg)`;
+    paint(section(scrollY + y + helm.offsetHeight / 2));
+    requestAnimationFrame(frame);
+  }
+  function park() {
+    x = innerWidth - helm.offsetWidth - 12;
+    y = innerHeight - helm.offsetHeight - 12;
+    helm.style.transform = `translate3d(${x}px,${y}px,0)`;
+    paint(section(scrollY + y + helm.offsetHeight / 2));
+  }
+
+  measure();
+  addEventListener('resize', () => { measure(); if (still) park(); });
+  addEventListener('load', measure);
+  if (still) { addEventListener('scroll', park, { passive: true }); park(); return; }
+  [x, y] = target(performance.now());
+  requestAnimationFrame(frame);
+})();

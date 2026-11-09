@@ -48,3 +48,9 @@
   .ticket-cta .btn{flex:1 1 100%;text-align:center}
   .addrow .btn{flex:1 1 100%;text-align:center}
 }
+
+/* spartan helmet follower */
+@media (max-width:768px){
+  .helm{width:68px}
+  .helm-tip{display:none}
+}

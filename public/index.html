@@ -30,7 +30,7 @@
 </header>
 
 <main id="top">
-<section class="hero">
+<section class="hero" data-helm="#d4122b" data-tip="Stay sharp">
   <div class="hero-copy">
     <h1>Built like a Spartan.<br>Sipped like a treat.</h1>
     <p>Loaded teas, specialty drinks and nutritional shakes. Healthy nutrition on the go, made fresh in Saraland.</p>
@@ -43,7 +43,7 @@
   <div class="slot hero-slot" data-label="Hero drink image (transparent PNG, 800x1000)"></div>
 </section>
 
-<section class="new" id="new">
+<section class="new" id="new" data-helm="#ff9f1c" data-tip="Fresh drops">
   <div class="wrap">
     <h2>What's new</h2>
     <p class="sub">Fresh drops on the board. Swipe through.</p>
@@ -57,7 +57,7 @@
   </div>
 </section>
 
-<section class="menu" id="menu">
+<section class="menu" id="menu" data-helm="#7ad151" data-tip="Pick your fuel">
   <div class="wrap">
     <h2>The menu</h2>
     <p class="sub">Pick a lane. Every drink can be tuned to your energy level.</p>
@@ -121,7 +121,7 @@
   </div>
 </section>
 
-<section class="build" id="build">
+<section class="build" id="build" data-helm="#ff5d8f" data-tip="Build it">
   <div class="wrap">
     <h2>Build your order</h2>
     <p class="sub">Mix it your way, watch the total, then call it in.</p>
@@ -154,7 +154,7 @@
   </div>
 </section>
 
-<section class="about" id="about">
+<section class="about" id="about" data-helm="#d4122b" data-tip="Meet the crew">
   <div class="wrap two">
     <div>
       <h2>A neighborhood shop with a warrior streak</h2>
@@ -177,7 +177,7 @@
   </div>
 </section>
 
-<section class="tagus" id="tag">
+<section class="tagus" id="tag" data-helm="#a78bfa" data-tip="Show us your sip">
   <div class="wrap">
     <h2>Show us your sip</h2>
     <!-- TODO: confirm Instagram handle with owner (unverified) -->
@@ -192,7 +192,7 @@
   </div>
 </section>
 
-<section class="visit" id="visit">
+<section class="visit" id="visit" data-helm="#2dd4bf" data-tip="Come find us">
   <div class="wrap two">
     <div>
       <h2>Find us in Saraland</h2>
@@ -212,7 +212,7 @@
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact" id="contact" data-helm="#d4122b" data-tip="Ask away">
   <div class="wrap narrow">
     <h2>Got a question?</h2>
     <p class="sub">Tell us what you need and we'll get back to you.</p>
@@ -236,7 +236,7 @@
 </section>
 </main>
 
-<footer>
+<footer data-helm="#f4ece8" data-tip="See you in Saraland">
   <div class="wrap foot">
     <strong>Spartan Nutrition</strong>
     <span>620 Saraland Blvd S, Suite B, Saraland, AL 36571</span>
@@ -246,6 +246,23 @@
     <small>Independent Herbalife distributor. Statements have not been evaluated by the FDA. Demo site by ShakurWebsites.</small>
   </div>
 </footer>
+
+<div class="helm" id="helm" aria-hidden="true">
+  <span class="helm-tip"></span>
+  <svg viewBox="-16 -6 96 84" class="helm-svg">
+    <defs>
+      <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#5a4a44"/><stop offset=".5" stop-color="#2a1a1c"/><stop offset="1" stop-color="#120809"/>
+      </linearGradient>
+    </defs>
+    <g class="wing wing-l"><path d="M14 36C2 20-12 26-8 42c3 8 14 8 22 2Z"/></g>
+    <g class="wing wing-r"><path d="M50 36C62 20 76 26 72 42c-3 8-14 8-22 2Z"/></g>
+    <path class="crest" d="M12 24C8 4 28-4 32 4c4-8 24 0 20 20Z"/>
+    <path class="dome" d="M14 26C14 14 22 9 32 9s18 5 18 17v20c0 10-6 20-12 22l-2-12h-8l-2 12c-6-2-12-12-12-22Z"/>
+    <path class="rim" d="M17 24c2-8 8-11 15-11s13 3 15 11" />
+    <path class="eye" d="M22 29h20v8h-7v16h-6V37h-7Z"/>
+  </svg>
+</div>
 
 <script src="index.js"></script>
 </body>
