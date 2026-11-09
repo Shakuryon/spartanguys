@@ -1,0 +1,50 @@
+/* Breakpoints: swap these values for your Shahara media-query standard */
+@media (max-width:1024px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .two{gap:2rem}
+  section{padding:4.5rem 0}
+}
+@media (max-width:768px){
+  .burger{display:block}
+  .links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:1.2rem;padding:1.5rem;background:var(--black);border-bottom:1px solid var(--blood);display:none}
+  .links.open{display:flex}
+  .burger.open span:first-child{transform:translateY(4.5px) rotate(45deg)}
+  .burger.open span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+  .hero{grid-template-columns:1fr;padding-top:3rem}
+  .hero-slot{max-width:340px;margin:0 auto;width:100%}
+  .two{grid-template-columns:1fr}
+  .facts.open{max-height:120px}
+  .facts{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:480px){
+  .grid{grid-template-columns:1fr}
+  .wrap{padding:0 1.1rem}
+  section{padding:3.5rem 0}
+  .cta .btn{width:100%;text-align:center}
+}
+
+/* added sections */
+@media (max-width:1024px){
+  .pillars{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  .rail{padding-left:1.5rem;padding-right:1.5rem}
+  .proof a{margin-left:0}
+  .nav .links{gap:1rem}
+}
+@media (max-width:480px){
+  .pillars{grid-template-columns:1fr}
+  .promo{flex-basis:78vw}
+  .squares .slot{flex-basis:62vw}
+  .proof strong{font-size:2.8rem}
+}
+
+/* order builder */
+@media (max-width:900px){
+  .bgrid{grid-template-columns:1fr;gap:2rem}
+  .ticket{position:static}
+}
+@media (max-width:480px){
+  .ticket-cta .btn{flex:1 1 100%;text-align:center}
+  .addrow .btn{flex:1 1 100%;text-align:center}
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spartan Nutrition | Loaded Teas & Shakes in Saraland, AL</title>
+<meta name="description" content="Loaded teas, specialty drinks and nutritional shakes at 620 Saraland Blvd S, Saraland, AL. Healthy nutrition on the go.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Fredoka:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#top" class="brand" aria-label="Spartan Nutrition home">
+    <svg viewBox="0 0 40 48" class="crest" aria-hidden="true"><path d="M20 2C9 2 4 11 4 22v14l7 3v7h8v-8h2v8h8v-7l7-3V22C36 11 31 2 20 2Zm-9 22h7v6h-7Zm11 0h7v6h-7Z"/></svg>
+    <span>Spartan Nutrition</span>
+  </a>
+  <button class="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+  <nav class="links">
+    <a href="#new">What's new</a>
+    <a href="#menu">Menu</a>
+    <a href="#build">Build</a>
+    <a href="#about">About</a>
+    <a href="#visit">Visit</a>
+    <a href="#contact" class="pill">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-copy">
+    <h1>Built like a Spartan.<br>Sipped like a treat.</h1>
+    <p>Loaded teas, specialty drinks and nutritional shakes. Healthy nutrition on the go, made fresh in Saraland.</p>
+    <div class="cta">
+      <a href="#menu" class="btn">See the menu</a>
+      <a href="#visit" class="btn ghost">Get directions</a>
+    </div>
+  </div>
+  <!-- DROP HERO DRINK PNG (transparent) into this slot: <img src="images/hero.png" alt="..."> -->
+  <div class="slot hero-slot" data-label="Hero drink image (transparent PNG, 800x1000)"></div>
+</section>
+
+<section class="new" id="new">
+  <div class="wrap">
+    <h2>What's new</h2>
+    <p class="sub">Fresh drops on the board. Swipe through.</p>
+  </div>
+  <div class="rail">
+    <!-- Seasonal items are demo placeholders. Swap for real specials. -->
+    <article class="promo" style="--tint:#ffd9a8"><div class="slot" data-label="Seasonal drink PNG"></div><span class="date">All November</span><h3>Pumpkin Pie Shake</h3><p>Creamy pumpkin, cinnamon and a whipped finish.</p></article>
+    <article class="promo" style="--tint:#d4efe0"><div class="slot" data-label="Seasonal drink PNG"></div><span class="date">Starts Dec 1</span><h3>Peppermint Phalanx Tea</h3><p>Cool peppermint over a loaded tea base, built for cold mornings.</p></article>
+    <article class="promo" style="--tint:#ffd3dc"><div class="slot" data-label="Seasonal drink PNG"></div><span class="date">Always on</span><h3>Add a boost</h3><p>Ask the crew to add extra energy or protein to almost any drink.</p></article>
+    <article class="promo" style="--tint:#e2d9ff"><div class="slot" data-label="Seasonal drink PNG"></div><span class="date">Coming soon</span><h3>Blackberry Battle Tea</h3><p>Dark berry, lemon and a little fizz. Vote for it on Facebook.</p></article>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <h2>The menu</h2>
+    <p class="sub">Pick a lane. Every drink can be tuned to your energy level.</p>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-cat="tea" role="tab">Loaded teas</button>
+      <button class="tab" data-cat="shake" role="tab">Shakes</button>
+      <button class="tab" data-cat="all" role="tab">Show all</button>
+    </div>
+
+    <div class="grid">
+      <!-- Each card: swap the .slot div for <img class="drink" src="images/NAME.png" alt="NAME"> -->
+      <article class="card" data-cat="tea" style="--tint:#d9f2c4">
+        <div class="slot" data-label="Poison Apple PNG"></div>
+        <h3>The Poison Apple</h3>
+        <p>Green apple, lime and a sour sparkle. Looks wicked, tastes dangerously good.</p>
+        <button class="facts-btn" aria-expanded="false">Nutrition facts</button>
+        <dl class="facts"><div><dt>Calories</dt><dd>25</dd></div><div><dt>Protein</dt><dd>0g</dd></div><div><dt>Sugar</dt><dd>0g</dd></div><div><dt>Caffeine</dt><dd>85mg</dd></div></dl>
+      </article>
+
+      <article class="card" data-cat="tea" style="--tint:#ffd3dc">
+        <div class="slot" data-label="Spartan Fury PNG"></div>
+        <h3>Spartan Fury</h3>
+        <p>Strawberry, pomegranate and a kick of raspberry. Our loudest red.</p>
+        <button class="facts-btn" aria-expanded="false">Nutrition facts</button>
+        <dl class="facts"><div><dt>Calories</dt><dd>30</dd></div><div><dt>Protein</dt><dd>0g</dd></div><div><dt>Sugar</dt><dd>1g</dd></div><div><dt>Caffeine</dt><dd>85mg</dd></div></dl>
+      </article>
+
+      <article class="card" data-cat="tea" style="--tint:#ffe2b8">
+        <div class="slot" data-label="Hoplite Haze PNG"></div>
+        <h3>Hoplite Haze</h3>
+        <p>Peach, mango and blue raspberry swirl for the afternoon push.</p>
+        <button class="facts-btn" aria-expanded="false">Nutrition facts</button>
+        <dl class="facts"><div><dt>Calories</dt><dd>25</dd></div><div><dt>Protein</dt><dd>0g</dd></div><div><dt>Sugar</dt><dd>1g</dd></div><div><dt>Caffeine</dt><dd>85mg</dd></div></dl>
+      </article>
+
+      <article class="card" data-cat="shake" style="--tint:#ffd9e8">
+        <div class="slot" data-label="Strawberry Souffle PNG"></div>
+        <h3>Strawberry Soufflé</h3>
+        <p>Creamy strawberry shake with a light, whipped finish.</p>
+        <button class="facts-btn" aria-expanded="false">Nutrition facts</button>
+        <dl class="facts"><div><dt>Calories</dt><dd>220</dd></div><div><dt>Protein</dt><dd>24g</dd></div><div><dt>Sugar</dt><dd>9g</dd></div><div><dt>Caffeine</dt><dd>0mg</dd></div></dl>
+      </article>
+
+      <article class="card" data-cat="shake" style="--tint:#e6d9c8">
+        <div class="slot" data-label="Cookies and Cream PNG"></div>
+        <h3>Phalanx Cookies &amp; Cream</h3>
+        <p>Thick vanilla shake packed with chocolate cookie crunch.</p>
+        <button class="facts-btn" aria-expanded="false">Nutrition facts</button>
+        <dl class="facts"><div><dt>Calories</dt><dd>230</dd></div><div><dt>Protein</dt><dd>24g</dd></div><div><dt>Sugar</dt><dd>10g</dd></div><div><dt>Caffeine</dt><dd>0mg</dd></div></dl>
+      </article>
+
+      <article class="card" data-cat="shake" style="--tint:#d6f0ef">
+        <div class="slot" data-label="Mint Chip PNG"></div>
+        <h3>Mint Chip Shield</h3>
+        <p>Cool mint and dark chocolate, blended smooth and low-carb friendly.</p>
+        <button class="facts-btn" aria-expanded="false">Nutrition facts</button>
+        <dl class="facts"><div><dt>Calories</dt><dd>200</dd></div><div><dt>Protein</dt><dd>23g</dd></div><div><dt>Sugar</dt><dd>6g</dd></div><div><dt>Caffeine</dt><dd>0mg</dd></div></dl>
+      </article>
+    </div>
+    <p class="note">Demo flavors and nutrition values are placeholders. Final menu to be confirmed with the shop.</p>
+  </div>
+</section>
+
+<section class="build" id="build">
+  <div class="wrap">
+    <h2>Build your order</h2>
+    <p class="sub">Mix it your way, watch the total, then call it in.</p>
+    <div class="bgrid">
+      <form id="builder">
+        <fieldset id="g-base"><legend>Pick a base</legend></fieldset>
+        <fieldset id="g-size"><legend>Pick a size</legend></fieldset>
+        <fieldset id="g-flavor"><legend>Flavors <small>(up to 3, first one is free of extra charge)</small></legend></fieldset>
+        <fieldset id="g-energy"><legend>Energy level</legend></fieldset>
+        <fieldset id="g-sweet"><legend>Sweetness</legend></fieldset>
+        <fieldset id="g-addin"><legend>Add-ins</legend></fieldset>
+        <div class="addrow">
+          <div class="qty"><button type="button" id="qMinus" aria-label="Fewer">&minus;</button><span id="qVal">1</span><button type="button" id="qPlus" aria-label="More">+</button></div>
+          <button type="button" class="btn" id="addBtn" disabled>Add to order</button>
+          <span class="hint" id="hint">Pick a base and size to start.</span>
+        </div>
+      </form>
+
+      <aside class="ticket" aria-live="polite">
+        <h3>Your order <span id="count">0 drinks</span></h3>
+        <ul id="cart"><li class="empty">Nothing yet. Build a drink and add it.</li></ul>
+        <div class="sub-row"><span>Subtotal <small>before tax</small></span><strong id="total">$0.00</strong></div>
+        <div class="ticket-cta">
+          <a class="btn" href="tel:+12516226002">Call to order</a>
+          <button type="button" class="btn ghost dark" id="copyBtn">Copy order</button>
+        </div>
+        <p class="tnote">Read your list to us at (251) 622-6002, or copy it to send ahead. Demo prices only.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap two">
+    <div>
+      <h2>A neighborhood shop with a warrior streak</h2>
+      <p>Spartan Nutrition is the Saraland stop for energy that tastes good. The crew knows regulars by their order, and every seasonal special gets its own story.</p>
+      <p>Come in for your usual. Stay for whatever wild flavor is on the board this week.</p>
+    </div>
+    <!-- DROP STOREFRONT / TEAM PHOTO here -->
+    <div class="slot wide-slot" data-label="Storefront or team photo (4:3)"></div>
+  </div>
+  <div class="wrap pillars">
+    <div><h3>Friendly crew</h3><p>Fast hellos, real recommendations and a drink made right.</p></div>
+    <div><h3>Made your way</h3><p>Pick the flavor, the energy level and the size that fits your day.</p></div>
+    <div><h3>Fresh flavors</h3><p>Seasonal specials with names worth ordering out loud.</p></div>
+    <div><h3>Rooted in Saraland</h3><p>A local shop on Saraland Blvd S, serving our own neighbors.</p></div>
+  </div>
+  <div class="wrap proof">
+    <strong>100%</strong>
+    <span>of 734 Facebook reviewers recommend Spartan Nutrition.</span>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">Read the reviews</a>
+  </div>
+</section>
+
+<section class="tagus" id="tag">
+  <div class="wrap">
+    <h2>Show us your sip</h2>
+    <!-- TODO: confirm Instagram handle with owner (unverified) -->
+    <p class="sub">Tag @spartannutritionsaraland and you might land on our wall.</p>
+  </div>
+  <div class="rail squares">
+    <div class="slot" data-label="Customer or drink photo"></div>
+    <div class="slot" data-label="Customer or drink photo"></div>
+    <div class="slot" data-label="Customer or drink photo"></div>
+    <div class="slot" data-label="Customer or drink photo"></div>
+    <div class="slot" data-label="Customer or drink photo"></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap two">
+    <div>
+      <h2>Find us in Saraland</h2>
+      <address>620 Saraland Blvd S, Suite B<br>Saraland, AL 36571</address>
+      <p><a href="tel:+12516226002">(251) 622-6002</a></p>
+      <!-- TODO: confirm hours with owner. Sources conflict. -->
+      <ul class="hours">
+        <li><span>Mon to Fri</span><span>6:30 AM to 5 PM</span></li>
+        <li><span>Saturday</span><span>8 AM to 3 PM</span></li>
+        <li><span>Sunday</span><span>8 AM to 2 PM</span></li>
+      </ul>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=620+Saraland+Blvd+S+Suite+B+Saraland+AL+36571">Get directions</a>
+    </div>
+    <div class="map-box">
+      <iframe title="Map to Spartan Nutrition" loading="lazy" src="https://www.google.com/maps?q=620+Saraland+Blvd+S+Suite+B+Saraland+AL+36571&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap narrow">
+    <h2>Got a question?</h2>
+    <p class="sub">Tell us what you need and we'll get back to you.</p>
+    <form id="contactForm" novalidate>
+      <label>Name<input type="text" name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>What's it about?
+        <select name="topic" required>
+          <option value="">Choose one</option>
+          <option>Menu or flavors</option>
+          <option>Hours and location</option>
+          <option>Events or large orders</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Message<textarea name="msg" rows="4" required></textarea></label>
+      <button type="submit" class="btn">Send message</button>
+      <p class="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <strong>Spartan Nutrition</strong>
+    <span>620 Saraland Blvd S, Suite B, Saraland, AL 36571</span>
+    <a href="tel:+12516226002">(251) 622-6002</a>
+    <a href="mailto:hwy213nutrition@yahoo.com">hwy213nutrition@yahoo.com</a>
+    <a target="_blank" rel="noopener" href="https://www.facebook.com/">Facebook</a>
+    <small>Independent Herbalife distributor. Statements have not been evaluated by the FDA. Demo site by ShakurWebsites.</small>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
