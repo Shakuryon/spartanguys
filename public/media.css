@@ -11,6 +11,7 @@
   .burger.open span:first-child{transform:translateY(4.5px) rotate(45deg)}
   .burger.open span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
   .hero{grid-template-columns:1fr;padding-top:3rem}
+  .hero::before{inset:0%;}
   .hero-slot{max-width:340px;margin:0 auto;width:100%}
   .two{grid-template-columns:1fr}
   .facts.open{max-height:120px}
